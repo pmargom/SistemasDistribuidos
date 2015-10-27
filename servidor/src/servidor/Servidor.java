@@ -8,7 +8,6 @@ package servidor;
 
 import common.IServidor;
 import common.Mensaje;
-import static java.lang.Math.random;
 import java.rmi.RemoteException;
 import java.util.HashMap;
 import java.util.LinkedList;
