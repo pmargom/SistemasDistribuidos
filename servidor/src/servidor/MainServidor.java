@@ -27,8 +27,8 @@ public class MainServidor {
         // preparamos el middleware
         IServidor remote = (IServidor)UnicastRemoteObject.exportObject(servidor, 8888); // no poner puertos menores a 1024 porque necesitan permisos (Linux)
         
-        
-        Registry registry = LocateRegistry.createRegistry(9000); //LocateRegistry.getRegistry(); // usa el puerto por defecto para el proxy que necesitamos
+        //Registry registry = LocateRegistry.getRegistry(); // usa el puerto por defecto para el proxy que necesitamos
+        Registry registry = LocateRegistry.createRegistry(9000); 
         registry.rebind("Pepito", remote);
         
         System.out.println("Servidor arrancado, presione enter para terminar");

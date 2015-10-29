@@ -16,7 +16,8 @@ public class MainCliente {
 	private static IServidor servidor;
 	
 	public static void main(String[] args) throws Exception {
-            Registry registry = LocateRegistry.getRegistry();
+            //Registry registry = LocateRegistry.getRegistry();
+            Registry registry = LocateRegistry.getRegistry(9000);
             servidor = (IServidor)registry.lookup("Pepito");
 
             gui();
